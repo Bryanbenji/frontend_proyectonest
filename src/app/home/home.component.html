@@ -1,0 +1,11 @@
+<app-menu></app-menu>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4" *ngIf="!nombreUsuario">Bienvenido</h1>
+        <h1 class="display-4" *ngIf="nombreUsuario">Bienvenido, {{nombreUsuario}}</h1>
+        <p class="lead">Ingeniería Web.</p>
+        <hr class="my-4">
+        <p>Realizado por Bryan Sarabino.</p>
+      </div>
+</div>
