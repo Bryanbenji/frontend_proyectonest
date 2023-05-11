@@ -12,7 +12,10 @@ import { Router } from '@angular/router';
 export class NuevoProductoComponent implements OnInit {
 
   nombre = '';
-  precio: number = null;
+  descripcion = '';
+  precioVenta: number = null;
+  precioCompra: number = null;
+  totalVendido: number = null;
 
   constructor(
     private productoService: ProductoService,
@@ -25,7 +28,7 @@ export class NuevoProductoComponent implements OnInit {
   }
 
   onCreate(): void {
-    const producto = new Producto(this.nombre, this.precio);
+    const producto = new Producto(this.nombre, this.descripcion, this.precioVenta,this.precioCompra, this.totalVendido);
     this.productoService.save(producto).subscribe(
       data => {
         this.toastr.success(data.message, 'OK', {
