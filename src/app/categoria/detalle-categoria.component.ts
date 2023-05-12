@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductoService } from '../services/producto.service';
+import { CategoriaService } from '../services/categoria.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Producto } from '../models/producto';
+import { Categoria } from '../models/categoria';
 @Component({
-  selector: 'app-detalle-producto',
-  templateUrl: './detalle-producto.component.html',
-  styleUrls: ['./detalle-producto.component.css']
+  selector: 'app-detalle-categoria',
+  templateUrl: './detalle-categoria.component.html',
+  styleUrls: ['./detalle-categoria.component.css']
 })
-export class DetalleProductoComponent implements OnInit {
+export class DetalleCategoriaComponent implements OnInit {
 
-  producto: Producto = null;
+  categoria: Categoria = null;
 
   constructor(
-    private productoService: ProductoService,
+    private categoriaService: CategoriaService,
     private activatedRoute: ActivatedRoute,
     private toastr: ToastrService,
     private router: Router
@@ -21,9 +21,9 @@ export class DetalleProductoComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params["id"];
-    this.productoService.detail(id).subscribe(
+    this.categoriaService.detail(id).subscribe(
       data => {
-        this.producto = data;
+        this.categoria = data;
       },
       err => {
         this.toastr.error(err.error.message, 'Fail', {
@@ -35,7 +35,7 @@ export class DetalleProductoComponent implements OnInit {
   }
 
   volver(): void {
-    this.router.navigate(['/listaProductos']);
+    this.router.navigate(['/listaCategorias']);
   }
 
 }

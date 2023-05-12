@@ -45,6 +45,6 @@ export class NuevoProductoComponent implements OnInit {
   }
 
   volver(): void {
-    this.router.navigate(['/lista']);
+    this.router.navigate(['/listaProductos']);
   }
 }

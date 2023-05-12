@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { Producto } from '../models/producto';
-import { ProductoService } from '../services/producto.service';
+import { Categoria } from '../models/categoria';
+import { CategoriaService } from '../services/categoria.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-editar-producto',
-  templateUrl: './editar-producto.component.html',
-  styleUrls: ['./editar-producto.component.css']
+  selector: 'app-editar-categoria',
+  templateUrl: './editar-categoria.component.html',
+  styleUrls: ['./editar-categoria.component.css']
 })
-export class EditarProductoComponent implements OnInit {
+export class EditarCategoriaComponent implements OnInit {
 
-  producto: Producto = null;
+  categoria: Categoria = null;
 
   constructor(
-    private productoService: ProductoService,
+    private categoriaService: CategoriaService,
     private activatedRoute: ActivatedRoute,
     private toastr: ToastrService,
     private router: Router
@@ -22,9 +22,9 @@ export class EditarProductoComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params["id"];
-    this.productoService.detail(id).subscribe(
+    this.categoriaService.detail(id).subscribe(
       data => {
-        this.producto = data;
+        this.categoria = data;
       },
       err => {
         this.toastr.error(err.error.menssage, 'Fail', {
@@ -37,7 +37,7 @@ export class EditarProductoComponent implements OnInit {
 
   onUpdate(): void {
     const id = this.activatedRoute.snapshot.params["id"];
-    this.productoService.update(id, this.producto).subscribe(
+    this.categoriaService.update(id, this.categoria).subscribe(
       data => {
         this.toastr.success(data.menssage, 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'
@@ -53,7 +53,7 @@ export class EditarProductoComponent implements OnInit {
   }
 
   volver(): void {
-    this.router.navigate(['/listaProductos']);
+    this.router.navigate(['/listaCategorias']);
   }
 
 }

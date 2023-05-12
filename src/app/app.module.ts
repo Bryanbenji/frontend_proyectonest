@@ -8,6 +8,10 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
+import { DetalleCategoriaComponent } from './categoria/detalle-categoria.component';
+import { EditarCategoriaComponent } from './categoria/editar-categoria.component';
+import { NuevaCategoriaComponent } from './categoria/nueva-categoria.component';
+import { ListaCategoriaComponent } from './categoria/lista-categoria.component';
 import { ListaProductoComponent } from './producto/lista-producto.component';
 import { NuevoProductoComponent } from './producto/nuevo-producto.component';
 import { EditarProductoComponent } from './producto/editar-producto.component';
@@ -31,6 +35,10 @@ import { ToastrModule } from 'ngx-toastr';
     NuevoProductoComponent,
     EditarProductoComponent,
     DetalleProductoComponent,
+    ListaCategoriaComponent,
+    NuevaCategoriaComponent,
+    EditarCategoriaComponent,
+    DetalleCategoriaComponent,
     HomeComponent,
     MenuComponent,
     LoginComponent,
