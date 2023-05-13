@@ -28,6 +28,7 @@ export class NuevaCategoriaComponent implements OnInit {
     const categoria = new Categoria(this.tipoCategoria, this.descripcion);
     this.categoriaService.save(categoria).subscribe(
       data => {
+        console.log(categoria)
         this.toastr.success(data.message, 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'
         });

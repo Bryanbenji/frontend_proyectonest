@@ -3,6 +3,8 @@ import { Producto } from '../models/producto';
 import { ProductoService } from '../services/producto.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { Categoria } from '../models/categoria';
+import { CategoriaService } from '../services/categoria.service';
 
 @Component({
   selector: 'app-editar-producto',
@@ -13,14 +15,29 @@ export class EditarProductoComponent implements OnInit {
 
   producto: Producto = null;
 
+  categorias: Categoria[];
+
   constructor(
     private productoService: ProductoService,
+    private categoriaService: CategoriaService,
     private activatedRoute: ActivatedRoute,
     private toastr: ToastrService,
     private router: Router
   ) { }
 
+  cargarCategorias(): void {
+    this.categoriaService.lista().subscribe(
+      categorias => {
+        this.categorias = categorias;
+      },
+      error => {
+        this.toastr.error('Error al cargar las categorías', 'Error');
+      }
+    );
+  }
+
   ngOnInit(): void {
+    this.cargarCategorias();
     const id = this.activatedRoute.snapshot.params["id"];
     this.productoService.detail(id).subscribe(
       data => {

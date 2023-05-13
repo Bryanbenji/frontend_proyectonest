@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'listaProductos', component: ListaProductoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
   {path: 'detalleProducto/:id', component: DetalleProductoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
-  {path: 'nuevoProducto', component: NuevoProductoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin']}},
+  {path: 'nuevoProducto', component: NuevoProductoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
   {path: 'editarProducto/:id', component: EditarProductoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin']}},
   {path: 'listaCategorias', component: ListaCategoriaComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
   {path: 'detalleCategoria/:id', component: DetalleCategoriaComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},

@@ -9,6 +9,12 @@
                     <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="producto.nombre"
                         required autocomplete="off">
                 </div>
+                <div>
+                    <label for="categoriaId">Categoría:</label>
+                    <select id="categoriaId" name="categoriaId" [(ngModel)]="producto.categoriaId">
+                      <option *ngFor="let categoria of categorias" [value]="categoria.id">{{ categoria.tipoCategoria }}</option>
+                    </select>
+                  </div>
                 <div class="form-group">
                     <label for="descripcion">Descripcion</label>
                     <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="producto.descripcion"
