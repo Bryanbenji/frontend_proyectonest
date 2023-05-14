@@ -7,6 +7,7 @@ export const environment = {
     productoURL: 'http://localhost:8080/producto/',
     categoriaURL:'http://localhost:8080/categoria/',
     proveedorURL:'http://localhost:8080/proveedor/',
+    contratoURL:'http://localhost:8080/contrato/',
     authURL: 'http://localhost:8080/auth/'
   };
   

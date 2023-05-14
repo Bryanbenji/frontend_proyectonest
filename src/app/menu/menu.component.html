@@ -22,6 +22,10 @@
         </li>
 
         <li class="nav-item" *ngIf="isAdmin">
+          <a class="nav-link" routerLink="/listaContratos"><i class="far fa-list-alt"></i> Lista Contratos</a>
+        </li>
+
+        <li class="nav-item" *ngIf="isAdmin">
           <a class="nav-link"  routerLink="/nuevoProducto"><i class="fas fa-plus-circle"></i> Nuevo Producto</a>
         </li>
 
@@ -31,6 +35,10 @@
 
         <li class="nav-item" *ngIf="isAdmin">
           <a class="nav-link"  routerLink="/nuevoProveedor"><i class="fas fa-plus-circle"></i> Nuevo Proveedor</a>
+        </li>
+
+        <li class="nav-item" *ngIf="isAdmin">
+          <a class="nav-link"  routerLink="/nuevoContrato"><i class="fas fa-plus-circle"></i> Nuevo Contrato</a>
         </li>
         
       </ul>

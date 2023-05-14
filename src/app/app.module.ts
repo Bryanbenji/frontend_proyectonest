@@ -29,6 +29,10 @@ import { DetalleProveedorComponent } from './proveedor/detalle-proveedor.compone
 import { EditarProveedorComponent } from './proveedor/editar-proveedor.component';
 import { NuevoProveedorComponent } from './proveedor/nuevo-proveedor.component';
 import { ListaProveedorComponent } from './proveedor/lista-proveedor.component';
+import { ListaContratoComponent } from './contrato/lista-contrato.component';
+import { NuevoContratoComponent } from './contrato/nuevo-contrato.component';
+import { EditarContratoComponent } from './contrato/editar-contrato.component';
+import { DetalleContratoComponent } from './contrato/detalle-contrato.component';
 
 
 
@@ -46,7 +50,11 @@ import { ListaProveedorComponent } from './proveedor/lista-proveedor.component';
     ListaProveedorComponent,
     NuevoProveedorComponent,
     EditarProveedorComponent,
-    DetalleProveedorComponent,
+    DetalleProveedorComponent,   
+    ListaContratoComponent,
+    NuevoContratoComponent,
+    EditarContratoComponent,
+    DetalleContratoComponent,
     HomeComponent,
     MenuComponent,
     LoginComponent,

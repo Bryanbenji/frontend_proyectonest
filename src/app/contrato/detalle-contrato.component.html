@@ -1,0 +1,27 @@
+<app-menu></app-menu>
+
+<div class="container">
+    <div class="row mt-5" *ngIf="contrato">
+      <div class="col-md-4 mx-auto">
+          <div class="card" style="width: 18rem;">
+              <div class="card-header text-center">
+                Detalle
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><b>ID: </b>{{contrato.id}}</li>
+                <li class="list-group-item"><b>Identificador: </b>{{contrato.identificador | date : "dd/MM/yyyy" }}</li>
+                <li class="list-group-item"><b>Fecha Inicio: </b>{{contrato.fechaInicio | date : "dd/MM/yyyy" }}</li>                
+                <li class="list-group-item"><b>Fecha Fin: </b>{{contrato.fechaFin | date : "dd/MM/yyyy" }}</li>
+                <li class="list-group-item"><b>Fecha Entrega Realizada: </b>{{contrato.fechaEntregaRealizada | date : "dd/MM/yyyy" }}</li>                
+                <li class="list-group-item"><b>Proveedor: </b>{{contrato.descripcion}}</li>                
+                <li class="list-group-item"><b>Proveedor: </b>{{contrato.proveedor}}</li>
+              </ul>
+              <div class="card-footer">
+                  <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+              </div>
+            </div>
+            
+      </div>
+  </div>
+  </div>
+  
