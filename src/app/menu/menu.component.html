@@ -16,11 +16,21 @@
         <li class="nav-item" *ngIf="isLogged">
           <a class="nav-link" routerLink="/listaProductos"><i class="far fa-list-alt"></i> Lista Productos</a>
         </li>
+
+        <li class="nav-item" *ngIf="isAdmin">
+          <a class="nav-link" routerLink="/listaProveedores"><i class="far fa-list-alt"></i> Lista Proveedores</a>
+        </li>
+
         <li class="nav-item" *ngIf="isAdmin">
           <a class="nav-link"  routerLink="/nuevoProducto"><i class="fas fa-plus-circle"></i> Nuevo Producto</a>
         </li>
+
         <li class="nav-item" *ngIf="isAdmin">
           <a class="nav-link"  routerLink="/nuevaCategoria"><i class="fas fa-plus-circle"></i> Nueva Categoria</a>
+        </li>
+
+        <li class="nav-item" *ngIf="isAdmin">
+          <a class="nav-link"  routerLink="/nuevoProveedor"><i class="fas fa-plus-circle"></i> Nuevo Proveedor</a>
         </li>
         
       </ul>

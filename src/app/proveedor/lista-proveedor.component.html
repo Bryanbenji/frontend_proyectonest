@@ -1,0 +1,33 @@
+<app-menu></app-menu>
+
+<div class="container" *ngIf="!listaVacia">
+    <table class="table table-dark text-center">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Ruc</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Mail</th>
+            <th scope="col" *ngIf="isAdmin">Editar</th>
+            <th scope="col" *ngIf="isAdmin">Borrar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let proveedor of proveedores">
+            <td>{{proveedor.id}}</td>
+            <td>{{proveedor.ruc}}</td>
+            <td>{{proveedor.nombre}}</td>
+            <td>{{proveedor.telefono}}</td>
+            <td>{{proveedor.email}}</td>
+            <td><button class="btn btn-outline-primary" routerLink="/detalleProveedor/{{proveedor.id}}"><i class="far fa-eye"></i> Ver</button></td>
+            <td *ngIf="isAdmin"><button class="btn btn-outline-warning" routerLink="/editarProveedor/{{proveedor.id}}"><i class="far fa-edit"></i> Editar</button></td>
+            <td *ngIf="isAdmin"><button class="btn btn-outline-danger" (click)="borrar(proveedor.id)"><i class="far fa-trash-alt"></i> Eliminar</button></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+<div class="container" *ngIf="listaVacia">
+    <div class="p-3 mb-2 bg-dark text-white text-center"><h2>{{listaVacia}}</h2></div>
+</div>

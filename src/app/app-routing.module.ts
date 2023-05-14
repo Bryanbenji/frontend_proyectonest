@@ -13,18 +13,26 @@ import { DetalleCategoriaComponent } from './categoria/detalle-categoria.compone
 import { NuevaCategoriaComponent } from './categoria/nueva-categoria.component';
 import { ListaCategoriaComponent } from './categoria/lista-categoria.component';
 import { EditarCategoriaComponent } from './categoria/editar-categoria.component';
+import { EditarProveedorComponent } from './proveedor/editar-proveedor.component';
+import { NuevoProveedorComponent } from './proveedor/nuevo-proveedor.component';
+import { DetalleProveedorComponent } from './proveedor/detalle-proveedor.component';
+import { ListaProveedorComponent } from './proveedor/lista-proveedor.component';
 
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'listaProductos', component: ListaProductoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
   {path: 'detalleProducto/:id', component: DetalleProductoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
-  {path: 'nuevoProducto', component: NuevoProductoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
+  {path: 'nuevoProducto', component: NuevoProductoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin']}},
   {path: 'editarProducto/:id', component: EditarProductoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin']}},
-  {path: 'listaCategorias', component: ListaCategoriaComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
+  {path: 'listaCategorias', component: ListaCategoriaComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin']}},
   {path: 'detalleCategoria/:id', component: DetalleCategoriaComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
   {path: 'nuevaCategoria', component: NuevaCategoriaComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin']}},
   {path: 'editarCategoria/:id', component: EditarCategoriaComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin']}},
+  {path: 'listaProveedores', component: ListaProveedorComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin']}},
+  {path: 'detalleProveedor/:id', component: DetalleProveedorComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin']}},
+  {path: 'nuevoProveedor', component: NuevoProveedorComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin']}},
+  {path: 'editarProveedor/:id', component: EditarProveedorComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin']}},
   {path: 'login', component: LoginComponent, canActivate: [LoginGuard]},
   {path: 'registro', component: RegistroComponent, canActivate: [LoginGuard]},
   {path: '**', redirectTo: '', pathMatch: 'full'}

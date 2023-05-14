@@ -25,6 +25,10 @@ import { RegistroComponent } from './auth/registro.component';
 //external
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { DetalleProveedorComponent } from './proveedor/detalle-proveedor.component';
+import { EditarProveedorComponent } from './proveedor/editar-proveedor.component';
+import { NuevoProveedorComponent } from './proveedor/nuevo-proveedor.component';
+import { ListaProveedorComponent } from './proveedor/lista-proveedor.component';
 
 
 
@@ -39,6 +43,10 @@ import { ToastrModule } from 'ngx-toastr';
     NuevaCategoriaComponent,
     EditarCategoriaComponent,
     DetalleCategoriaComponent,
+    ListaProveedorComponent,
+    NuevoProveedorComponent,
+    EditarProveedorComponent,
+    DetalleProveedorComponent,
     HomeComponent,
     MenuComponent,
     LoginComponent,
