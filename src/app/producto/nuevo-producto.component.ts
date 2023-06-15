@@ -18,7 +18,7 @@ export class NuevoProductoComponent implements OnInit {
   precioVenta: number = null;
   precioCompra: number = null;
   totalVendido: number = null;
-  categoriaId: number = null;
+  categoria = '';
 
   categorias: Categoria[];
 
@@ -34,10 +34,6 @@ export class NuevoProductoComponent implements OnInit {
     this.cargarCategorias();
   }
 
-  onCategoriaChange(event: any): void {
-    this.categoriaId = Number(event.target.value);
-  }
-
   cargarCategorias(): void {
     this.categoriaService.lista().subscribe(
       categorias => {
@@ -50,8 +46,7 @@ export class NuevoProductoComponent implements OnInit {
   }
 
   onCreate(): void {
-    const producto = new Producto(this.nombre, this.descripcion, this.precioVenta,this.precioCompra, this.totalVendido, this.categoriaId);
-    console.log(this.categoriaId);
+    const producto = new Producto(this.nombre, this.descripcion, this.precioVenta,this.precioCompra, this.totalVendido, this.categoria);
     this.productoService.save(producto).subscribe(
       data => {
         this.toastr.success(data.message, 'OK', {

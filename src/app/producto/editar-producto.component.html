@@ -10,9 +10,9 @@
                         required autocomplete="off">
                 </div>
                 <div>
-                    <label for="categoriaId">Categoría:</label>
-                    <select id="categoriaId" name="categoriaId" [(ngModel)]="producto.categoriaId">
-                      <option *ngFor="let categoria of categorias" [value]="categoria.id">{{ categoria.tipoCategoria }}</option>
+                    <label for="categoria">Categoría:</label>
+                    <select id="categoria" name="categoriaId" [(ngModel)]="producto.categoria">
+                      <option *ngFor="let categoria of categorias" [value]="categoria.tipoCategoria">{{ categoria.tipoCategoria }}</option>
                     </select>
                   </div>
                 <div class="form-group">

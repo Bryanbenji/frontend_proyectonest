@@ -24,7 +24,7 @@
             <td>{{producto.precioVenta}}$</td>
             <td>{{producto.precioCompra}}$</td>
             <td>{{producto.totalVendido}}</td>
-            <td>{{producto.categoriaId}}</td>
+            <td>{{producto.categoria}}</td>
             <td><button class="btn btn-outline-primary" routerLink="/detalleProducto/{{producto.id}}"><i class="far fa-eye"></i> Ver</button></td>
             <td *ngIf="isAdmin"><button class="btn btn-outline-warning" routerLink="/editarProducto/{{producto.id}}"><i class="far fa-edit"></i> Editar</button></td>
             <td *ngIf="isAdmin"><button class="btn btn-outline-danger" (click)="borrar(producto.id)"><i class="far fa-trash-alt"></i> Eliminar</button></td>

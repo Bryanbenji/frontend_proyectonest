@@ -5,16 +5,16 @@ export class Producto {
     precioVenta: number;
     precioCompra: number;
     totalVendido: number;
-    categoriaId: number;
+    categoria: string;
 
 
-    constructor(nombre: string, descripcion:string, precioVenta: number, precioCompra: number, totalVendido:number, categoriaId: number) {
+    constructor(nombre: string, descripcion:string, precioVenta: number, precioCompra: number, totalVendido:number, categoria: string) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.precioVenta = precioVenta;
         this.precioCompra = precioCompra;
         this.totalVendido = totalVendido;
-        this.categoriaId = categoriaId;
+        this.categoria = categoria;
 
     }
 }
