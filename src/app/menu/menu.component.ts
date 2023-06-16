@@ -1,6 +1,8 @@
 import { Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { TokenService } from '../services/token.service';
+
+declare var $: any;
 
 @Component({
   selector: 'app-menu',
@@ -21,6 +23,8 @@ export class MenuComponent implements OnInit {
     this.isLogged = this.tokenService.isLogged();
     this.isAdmin = this.tokenService.isAdmin();
   }
+
+  
 
   logOut(): void {
     this.tokenService.logOut();
