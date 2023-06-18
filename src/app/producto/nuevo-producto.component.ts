@@ -14,6 +14,7 @@ import { CategoriaService } from '../services/categoria.service';
 export class NuevoProductoComponent implements OnInit {
 
   nombre = '';
+  imagenUrl = '';
   descripcion = '';
   precioVenta: number = null;
   precioCompra: number = null;
@@ -46,7 +47,7 @@ export class NuevoProductoComponent implements OnInit {
   }
 
   onCreate(): void {
-    const producto = new Producto(this.nombre, this.descripcion, this.precioVenta,this.precioCompra, this.totalVendido, this.categoria);
+    const producto = new Producto(this.nombre, this.imagenUrl, this.descripcion, this.precioVenta,this.precioCompra, this.totalVendido, this.categoria);
     this.productoService.save(producto).subscribe(
       data => {
         this.toastr.success(data.message, 'OK', {

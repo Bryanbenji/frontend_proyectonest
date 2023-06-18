@@ -5,7 +5,8 @@
         <thead>
           <tr>
             <th scope="col">Id</th>
-            <th scope="col">Nombre</th>
+            <th scope="col">Nombre</th>            
+            <th scope="col">Imagen</th>
             <th scope="col">Descripcion</th>
             <th scope="col">Precio de Venta</th>
             <th scope="col">Precio de Compra</th>
@@ -20,6 +21,7 @@
           <tr *ngFor="let producto of productos">
             <td>{{producto.id}}</td>
             <td>{{producto.nombre}}</td>
+            <img src="{{ producto.imagenUrl}}" class="imagen-40">
             <td>{{producto.descripcion}}</td>
             <td>{{producto.precioVenta}}$</td>
             <td>{{producto.precioCompra}}$</td>
