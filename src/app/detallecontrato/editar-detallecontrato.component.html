@@ -1,0 +1,30 @@
+<app-menu></app-menu>
+
+<div class="container" *ngIf="detallecontrato">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="identificadorContrato">Identificador Contrato</label>
+                    <select [(ngModel)]="detallecontrato.identificadorContrato" name="identificadorContrato">
+                        <option *ngFor="let contrato of contratos" [value]="contrato.identificador">{{ contrato.identificador }}</option>
+                      </select>
+                </div>
+                <div class="form-group">
+                    <label for="fechaEntregaRealizada">Fecha Entrega Realizada</label>
+                    <input type="date" class="form-control" id="fechaEntregaRealizada" name="fechaEntregaRealizada" [(ngModel)]="detallecontrato.fechaEntregaRealizada"
+                        required autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripcion</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="detallecontrato.descripcion"
+                        required autocomplete="off">
+                </div>             
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">
+                    <i class="fa-regular fa-pen-to-square"></i>Actualizar</button>
+                <button class="btn btn-outline-primary btn-block" (click)="volver()"><i
+                        class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+            </form>
+        </div>
+    </div>
+</div>

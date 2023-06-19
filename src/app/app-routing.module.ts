@@ -21,6 +21,10 @@ import { ListaContratoComponent } from './contrato/lista-contrato.component';
 import { DetalleContratoComponent } from './contrato/detalle-contrato.component';
 import { NuevoContratoComponent } from './contrato/nuevo-contrato.component';
 import { EditarContratoComponent } from './contrato/editar-contrato.component';
+import { ListaDetalleContratoComponent } from './detallecontrato/lista-detallecontrato.component';
+import { DetalleDetalleContratoComponent } from './detallecontrato/detalle-detallecontrato.component';
+import { NuevoDetalleContratoComponent } from './detallecontrato/nuevo-detallecontrato.component';
+import { EditarDetalleContratoComponent } from './detallecontrato/editar-detallecontrato.component';
 
 
 const routes: Routes = [
@@ -41,6 +45,10 @@ const routes: Routes = [
   {path: 'detalleContrato/:id', component: DetalleContratoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin']}},
   {path: 'nuevoContrato', component: NuevoContratoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
   {path: 'editarContrato/:id', component: EditarContratoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin']}},
+  {path: 'listaDetalleContratos', component: ListaDetalleContratoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin']}},
+  {path: 'detalleDetalleContrato/:id', component: DetalleDetalleContratoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin']}},
+  {path: 'nuevoDetalleContrato', component: NuevoDetalleContratoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
+  {path: 'editarDetalleContrato/:id', component: EditarDetalleContratoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin']}},
   {path: 'login', component: LoginComponent, canActivate: [LoginGuard]},
   {path: 'registro', component: RegistroComponent, canActivate: [LoginGuard]},
   {path: '**', redirectTo: '', pathMatch: 'full'}

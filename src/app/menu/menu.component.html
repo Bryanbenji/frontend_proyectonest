@@ -38,7 +38,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="productosDropdown">
           <a class="dropdown-item" routerLink="/listaProductos">Lista Productos</a>
-          <a class="dropdown-item" routerLink="/nuevoProducto">Nuevo Producto</a>
+          <a class="dropdown-item" routerLink="/nuevoProducto" *ngIf="isAdmin">Nuevo Producto</a>
         </div>
       </li>
 
@@ -59,6 +59,16 @@
         <div class="dropdown-menu" aria-labelledby="contratosDropdown">
           <a class="dropdown-item" routerLink="/listaContratos">Lista Contratos</a>
           <a class="dropdown-item" routerLink="/nuevoContrato">Nuevo Contrato</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown" *ngIf="isAdmin">
+        <a class="nav-link dropdown-toggle" href="#" id="detallecontratosDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="far fa-list-alt"></i> Detalle Contratos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="detallecontratosDropdown">
+          <a class="dropdown-item" routerLink="/listaDetalleContratos">Lista Detalle Contratos</a>
+          <a class="dropdown-item" routerLink="/nuevoDetalleContrato">Nuevo Detalle Contrato</a>
         </div>
       </li>
     </ul>

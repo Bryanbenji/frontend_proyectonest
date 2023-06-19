@@ -33,6 +33,10 @@ import { ListaContratoComponent } from './contrato/lista-contrato.component';
 import { NuevoContratoComponent } from './contrato/nuevo-contrato.component';
 import { EditarContratoComponent } from './contrato/editar-contrato.component';
 import { DetalleContratoComponent } from './contrato/detalle-contrato.component';
+import { DetalleDetalleContratoComponent } from './detallecontrato/detalle-detallecontrato.component';
+import { EditarDetalleContratoComponent } from './detallecontrato/editar-detallecontrato.component';
+import { NuevoDetalleContratoComponent } from './detallecontrato/nuevo-detallecontrato.component';
+import { ListaDetalleContratoComponent } from './detallecontrato/lista-detallecontrato.component';
 
 
 
@@ -54,7 +58,11 @@ import { DetalleContratoComponent } from './contrato/detalle-contrato.component'
     ListaContratoComponent,
     NuevoContratoComponent,
     EditarContratoComponent,
-    DetalleContratoComponent,
+    DetalleContratoComponent,  
+    ListaDetalleContratoComponent,
+    NuevoDetalleContratoComponent,
+    EditarDetalleContratoComponent,
+    DetalleDetalleContratoComponent,
     HomeComponent,
     MenuComponent,
     LoginComponent,

@@ -16,8 +16,6 @@ export class NuevoContratoComponent implements OnInit {
   identificador = '';
   fechaInicio ;
   fechaFin = null;
-  fechaEntregaRealizada = null;
-  descripcion = "";
   proveedor = "";
 
   proveedores: Proveedor[] = [];
@@ -47,14 +45,11 @@ export class NuevoContratoComponent implements OnInit {
     if (this.fechaFin instanceof Date) {
       this.fechaFin.setHours(0, 0, 0, 0);
     }
-    if (this.fechaEntregaRealizada instanceof Date) {
-      this.fechaEntregaRealizada.setHours(0, 0, 0, 0);
-    }
   }
 
   onCreate(): void {
     this.formatDatesForBackend();
-    const contrato = new Contrato(this.identificador, this.fechaInicio, this.fechaFin, this.fechaEntregaRealizada,this.descripcion,this.proveedor);    
+    const contrato = new Contrato(this.identificador, this.fechaInicio, this.fechaFin,this.proveedor);    
     this.contratoService.save(contrato).subscribe(
       data => {
         this.toastr.success(data.message, 'OK', {

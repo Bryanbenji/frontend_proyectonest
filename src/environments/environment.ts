@@ -8,6 +8,7 @@ export const environment = {
     categoriaURL:'http://localhost:8080/categoria/',
     proveedorURL:'http://localhost:8080/proveedor/',
     contratoURL:'http://localhost:8080/contrato/',
+    detallecontratoURL:'http://localhost:8080/detallecontrato/',
     authURL: 'http://localhost:8080/auth/'
   };
   
