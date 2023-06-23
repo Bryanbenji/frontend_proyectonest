@@ -37,6 +37,14 @@ import { DetalleDetalleContratoComponent } from './detallecontrato/detalle-detal
 import { EditarDetalleContratoComponent } from './detallecontrato/editar-detallecontrato.component';
 import { NuevoDetalleContratoComponent } from './detallecontrato/nuevo-detallecontrato.component';
 import { ListaDetalleContratoComponent } from './detallecontrato/lista-detallecontrato.component';
+import { DetalleReporteVentaProductoComponent } from './reporteventaproducto/detalle-reporteventaproducto.component';
+import { EditarReporteVentaProductoComponent } from './reporteventaproducto/editar-reporteventaproducto.component';
+import { NuevoReporteVentaProductoComponent } from './reporteventaproducto/nuevo-reporteventaproducto.component';
+import { ListaReporteVentaProductoComponent } from './reporteventaproducto/lista-reporteventaproducto.component';
+import { ListaTopProductoComponent } from './topproducto/lista-topproducto.component';
+import { DetalleTopProductoComponent } from './topproducto/detalle-topproducto.component';
+import { EditarTopProductoComponent } from './topproducto/editar-topproducto.component';
+import { NuevoTopProductoComponent } from './topproducto/nuevo-topproducto.component';
 
 
 
@@ -47,6 +55,10 @@ import { ListaDetalleContratoComponent } from './detallecontrato/lista-detalleco
     NuevoProductoComponent,
     EditarProductoComponent,
     DetalleProductoComponent,
+    ListaReporteVentaProductoComponent,
+    NuevoReporteVentaProductoComponent,
+    EditarReporteVentaProductoComponent,
+    DetalleReporteVentaProductoComponent,
     ListaCategoriaComponent,
     NuevaCategoriaComponent,
     EditarCategoriaComponent,
@@ -63,6 +75,10 @@ import { ListaDetalleContratoComponent } from './detallecontrato/lista-detalleco
     NuevoDetalleContratoComponent,
     EditarDetalleContratoComponent,
     DetalleDetalleContratoComponent,
+    ListaTopProductoComponent,
+    NuevoTopProductoComponent,
+    EditarTopProductoComponent,
+    DetalleTopProductoComponent,
     HomeComponent,
     MenuComponent,
     LoginComponent,

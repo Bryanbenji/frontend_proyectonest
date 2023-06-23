@@ -1,17 +1,17 @@
 <app-menu></app-menu>
 
 <div class="container">
-    <div class="row mt-5" *ngIf="detallecontrato">
+    <div class="row mt-5" *ngIf="reporteventaproducto">
       <div class="col-md-4 mx-auto">
           <div class="card" style="width: 18rem;">
               <div class="card-header text-center">
                 Detalle
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item"><b>ID: </b>{{detallecontrato.id}}</li>
-                <li class="list-group-item"><b>Identificador Contrato: </b>{{detallecontrato.identificadorContrato}}</li>
-                <li class="list-group-item"><b>Fecha Entrega Realizada: </b>{{detallecontrato.fechaEntregaRealizada | date : "dd/MM/yyyy" }}</li>                
-                <li class="list-group-item"><b>Descripcion: </b>{{detallecontrato.descripcion}}</li>
+                <li class="list-group-item"><b>ID: </b>{{reporteventaproducto.id}}</li>
+                <li class="list-group-item"><b>Nombre Producto: </b>{{reporteventaproducto.nombreproducto}}</li>
+                <li class="list-group-item"><b>Precio Venta: </b>{{reporteventaproducto.precioVenta}}$</li>
+                <li class="list-group-item"><b>Total Vendido: </b>{{reporteventaproducto.totalVendido}}</li>
               </ul>
               <div class="card-footer">
                   <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>

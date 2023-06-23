@@ -5,6 +5,8 @@
 export const environment = {
     production: false,
     productoURL: 'http://localhost:8080/producto/',
+    topproductoURL: 'http://localhost:8080/topproducto/',
+    reporteventaproductoURL: 'http://localhost:8080/reporteventaproducto/',
     categoriaURL:'http://localhost:8080/categoria/',
     proveedorURL:'http://localhost:8080/proveedor/',
     contratoURL:'http://localhost:8080/contrato/',

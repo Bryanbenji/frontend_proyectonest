@@ -8,6 +8,7 @@
             <th scope="col">Identificador Contrato</th>
             <th scope="col">Fecha Entrega Realizada</th>            
             <th scope="col">Descripcion</th>
+            <th scope="col">Ver</th>
             <th scope="col" *ngIf="isAdmin">Editar</th>
             <th scope="col" *ngIf="isAdmin">Borrar</th>
           </tr>
@@ -18,7 +19,7 @@
             <td>{{detallecontrato.identificadorContrato}}</td>
             <td>{{detallecontrato.fechaEntregaRealizada | date : "dd/MM/yyyy" }}</td>            
             <td>{{detallecontrato.descripcion}}</td>
-            <td><button class="btn btn-outline-primary" routerLink="/detalleDetallesContrato/{{detallecontrato.id}}"><i class="far fa-eye"></i> Ver</button></td>
+            <td><button class="btn btn-outline-primary" routerLink="/detalleDetalleContrato/{{detallecontrato.id}}"><i class="far fa-eye"></i> Ver</button></td>
             <td *ngIf="isAdmin"><button class="btn btn-outline-warning" routerLink="/editarDetalleContrato/{{detallecontrato.id}}"><i class="far fa-edit"></i> Editar</button></td>
             <td *ngIf="isAdmin"><button class="btn btn-outline-danger" (click)="borrar(detallecontrato.id)"><i class="far fa-trash-alt"></i> Eliminar</button></td>
           </tr>

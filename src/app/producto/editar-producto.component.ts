@@ -5,6 +5,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Categoria } from '../models/categoria';
 import { CategoriaService } from '../services/categoria.service';
+import { ProveedorService } from '../services/proveedor.service';
+import { Proveedor } from '../models/proveedor';
 
 @Component({
   selector: 'app-editar-producto',
@@ -16,10 +18,12 @@ export class EditarProductoComponent implements OnInit {
   producto: Producto = null;
 
   categorias: Categoria[];
+  proveedores: Proveedor[];
 
   constructor(
     private productoService: ProductoService,
     private categoriaService: CategoriaService,
+    private proveedorService: ProveedorService,
     private activatedRoute: ActivatedRoute,
     private toastr: ToastrService,
     private router: Router
@@ -36,8 +40,20 @@ export class EditarProductoComponent implements OnInit {
     );
   }
 
+  cargarProveedores(): void {
+    this.proveedorService.lista().subscribe(
+      proveedores => {
+        this.proveedores = proveedores;
+      },
+      error => {
+        this.toastr.error('Error al cargar los proveedores', 'Error');
+      }
+    );
+  }
+
   ngOnInit(): void {
     this.cargarCategorias();
+    this.cargarProveedores();
     const id = this.activatedRoute.snapshot.params["id"];
     this.productoService.detail(id).subscribe(
       data => {

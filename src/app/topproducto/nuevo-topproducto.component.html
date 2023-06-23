@@ -4,8 +4,9 @@
     <div class="row mt-5">
         <div class="col-md-4 mx-auto">
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                
                 <div class="form-group">
-                    <label for="nombre">Nombre</label>
+                    <label for="nombre">Nombre Producto</label>
                     <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required
                         autocomplete="off">
                 </div>
@@ -18,26 +19,16 @@
                     <label for="descripcion">Descripcion</label>
                     <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="descripcion" required
                         autocomplete="off">
-                        
-                <div class="form-group">
-                    <label for="nombreproveedor">Proveedor:</label>                    
-                    <select [(ngModel)]="nombreproveedor" name="nombreproveedor">
-                        <option value="">Seleccione un proveedor</option>
-                        <option *ngFor="let proveedor of proveedores" [ngValue]="proveedor.nombre">{{ proveedor.nombre }}</option>
-                      </select>
-                </div>
                 </div>
                 <div class="form-group">
-                    <label for="precioCompra">Precio de Compra Unitario</label>
-                    <input type="number" class="form-control" id="precioCompra" name="precioCompra" [(ngModel)]="precioCompra" required
+                    <label for="puntaje">Puntaje</label>
+                    <input type="number" class="form-control" id="puntaje" name="puntaje" [(ngModel)]="puntaje" required
                         autocomplete="off">
                 </div>
                 <div class="form-group">
-                    <label for="categoriaId">Categoria:</label>                    
-                    <select [(ngModel)]="categoria" name="categoria">
-                        <option value="">Seleccione una categoría</option>
-                        <option *ngFor="let categoria of categorias" [ngValue]="categoria.tipoCategoria">{{ categoria.tipoCategoria }}</option>
-                      </select>
+                    <label for="rentabilidad">Rentabilidad</label>
+                    <input type="text" class="form-control" id="rentabilidad" name="rentabilidad" [(ngModel)]="rentabilidad" required
+                        autocomplete="off">
                 </div>
                 <button type="submit" class="btn btn-outline-success btn-block" [disabled]="!f.valid">
                     <i class="far fa-plus-square"></i> Crear</button>
