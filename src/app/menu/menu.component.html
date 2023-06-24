@@ -90,6 +90,15 @@
           <a class="dropdown-item" routerLink="/listaTopProducto">Lista Top Producto</a>
         </div>
       </li>
+
+      <li class="nav-item dropdown" *ngIf="isLogged">
+        <a class="nav-link dropdown-toggle" href="#" id="proveedormasconfiableDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="far fa-list-alt"></i> Proveedor Confiable
+        </a>
+        <div class="dropdown-menu" aria-labelledby="proveedormasconfiableDropdown">
+          <a class="dropdown-item" routerLink="/listaProveedorMasConfiable">Lista Proveedor Confiable</a>
+        </div>
+      </li>
     </ul>
 
     

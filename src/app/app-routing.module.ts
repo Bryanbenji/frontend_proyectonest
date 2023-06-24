@@ -31,6 +31,11 @@ import { NuevoReporteVentaProductoComponent } from './reporteventaproducto/nuevo
 import { EditarReporteVentaProductoComponent } from './reporteventaproducto/editar-reporteventaproducto.component';
 import { DetalleTopProductoComponent } from './topproducto/detalle-topproducto.component';
 import { ListaTopProductoComponent } from './topproducto/lista-topproducto.component';
+import { EditarTopProductoComponent } from './topproducto/editar-topproducto.component';
+import { ListaProveedorMasConfiableComponent } from './proveedormasconfiable/lista-proveedormasconfiable.component';
+import { DetalleProveedorMasConfiableComponent } from './proveedormasconfiable/detalle-proveedormasconfiable.component';
+import { NuevoProveedorMasConfiableComponent } from './proveedormasconfiable/nuevo-proveedormasconfiable.component';
+import { EditarProveedorMasConfiableComponent } from './proveedormasconfiable/editar-proveedormasconfiable.component';
 
 
 const routes: Routes = [
@@ -62,7 +67,11 @@ const routes: Routes = [
   {path: 'listaTopProducto', component: ListaTopProductoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
   {path: 'detalleTopProducto/:id', component: DetalleTopProductoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
   {path: 'nuevoTopProducto', component: NuevoProductoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
-  {path: 'editarTopProducto/:id', component: EditarProductoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin']}},
+  {path: 'editarTopProducto/:id', component: EditarTopProductoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin']}},
+  {path: 'listaProveedorMasConfiable', component: ListaProveedorMasConfiableComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
+  {path: 'detalleProveedorMasConfiable/:id', component: DetalleProveedorMasConfiableComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
+  {path: 'nuevoProveedorMasConfiable', component: NuevoProveedorMasConfiableComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
+  {path: 'editarProveedorMasConfiable/:id', component: EditarProveedorMasConfiableComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin']}},
   {path: 'login', component: LoginComponent, canActivate: [LoginGuard]},
   {path: 'registro', component: RegistroComponent, canActivate: [LoginGuard]},
   {path: '**', redirectTo: '', pathMatch: 'full'}

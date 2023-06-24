@@ -1,0 +1,26 @@
+<app-menu></app-menu>
+
+<div class="container">
+    <div class="row mt-5" *ngIf="proveedormasconfiable">
+      <div class="col-md-4 mx-auto">
+          <div class="card" style="width: 18rem;">
+              <div class="card-header text-center">
+                Detalle
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><b>ID: </b>{{proveedormasconfiable.id}}</li>
+                <li class="list-group-item"><b>Ruc: </b>{{proveedormasconfiable.ruc}}</li>
+                <li class="list-group-item"><b>Nombre Proveedor: </b>{{proveedormasconfiable.nombreproveedor}}</li>
+                <li class="list-group-item"><b>Producto: </b>{{proveedormasconfiable.producto}}</li>
+                <li class="list-group-item"><b>Puntaje: </b>{{proveedormasconfiable.puntaje}}</li>
+                <li class="list-group-item"><b>Recindir Contrato: </b>{{proveedormasconfiable.recindir}}</li>
+              </ul>
+              <div class="card-footer">
+                  <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+              </div>
+            </div>
+            
+      </div>
+  </div>
+  </div>
+  

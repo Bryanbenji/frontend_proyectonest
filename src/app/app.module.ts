@@ -45,6 +45,10 @@ import { ListaTopProductoComponent } from './topproducto/lista-topproducto.compo
 import { DetalleTopProductoComponent } from './topproducto/detalle-topproducto.component';
 import { EditarTopProductoComponent } from './topproducto/editar-topproducto.component';
 import { NuevoTopProductoComponent } from './topproducto/nuevo-topproducto.component';
+import { DetalleProveedorMasConfiableComponent } from './proveedormasconfiable/detalle-proveedormasconfiable.component';
+import { EditarProveedorMasConfiableComponent } from './proveedormasconfiable/editar-proveedormasconfiable.component';
+import { NuevoProveedorMasConfiableComponent } from './proveedormasconfiable/nuevo-proveedormasconfiable.component';
+import { ListaProveedorMasConfiableComponent } from './proveedormasconfiable/lista-proveedormasconfiable.component';
 
 
 
@@ -79,6 +83,10 @@ import { NuevoTopProductoComponent } from './topproducto/nuevo-topproducto.compo
     NuevoTopProductoComponent,
     EditarTopProductoComponent,
     DetalleTopProductoComponent,
+    ListaProveedorMasConfiableComponent,
+    NuevoProveedorMasConfiableComponent,
+    EditarProveedorMasConfiableComponent,
+    DetalleProveedorMasConfiableComponent,
     HomeComponent,
     MenuComponent,
     LoginComponent,

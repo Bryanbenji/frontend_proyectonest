@@ -11,6 +11,7 @@ export const environment = {
     proveedorURL:'http://localhost:8080/proveedor/',
     contratoURL:'http://localhost:8080/contrato/',
     detallecontratoURL:'http://localhost:8080/detallecontrato/',
+    proveedormasconfiableURL : 'http://localhost:8080/proveedormasconfiable/',
     authURL: 'http://localhost:8080/auth/'
   };
   
