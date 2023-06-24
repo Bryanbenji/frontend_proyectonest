@@ -36,6 +36,7 @@ import { ListaProveedorMasConfiableComponent } from './proveedormasconfiable/lis
 import { DetalleProveedorMasConfiableComponent } from './proveedormasconfiable/detalle-proveedormasconfiable.component';
 import { NuevoProveedorMasConfiableComponent } from './proveedormasconfiable/nuevo-proveedormasconfiable.component';
 import { EditarProveedorMasConfiableComponent } from './proveedormasconfiable/editar-proveedormasconfiable.component';
+import { ListaReporteContratoComponent } from './reportecontrato/lista-reportecontrato.component';
 
 
 const routes: Routes = [
@@ -72,6 +73,7 @@ const routes: Routes = [
   {path: 'detalleProveedorMasConfiable/:id', component: DetalleProveedorMasConfiableComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
   {path: 'nuevoProveedorMasConfiable', component: NuevoProveedorMasConfiableComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
   {path: 'editarProveedorMasConfiable/:id', component: EditarProveedorMasConfiableComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin']}},
+  {path: 'listaReporteContrato', component: ListaReporteContratoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
   {path: 'login', component: LoginComponent, canActivate: [LoginGuard]},
   {path: 'registro', component: RegistroComponent, canActivate: [LoginGuard]},
   {path: '**', redirectTo: '', pathMatch: 'full'}

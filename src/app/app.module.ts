@@ -49,6 +49,7 @@ import { DetalleProveedorMasConfiableComponent } from './proveedormasconfiable/d
 import { EditarProveedorMasConfiableComponent } from './proveedormasconfiable/editar-proveedormasconfiable.component';
 import { NuevoProveedorMasConfiableComponent } from './proveedormasconfiable/nuevo-proveedormasconfiable.component';
 import { ListaProveedorMasConfiableComponent } from './proveedormasconfiable/lista-proveedormasconfiable.component';
+import { ListaReporteContratoComponent } from './reportecontrato/lista-reportecontrato.component';
 
 
 
@@ -87,6 +88,7 @@ import { ListaProveedorMasConfiableComponent } from './proveedormasconfiable/lis
     NuevoProveedorMasConfiableComponent,
     EditarProveedorMasConfiableComponent,
     DetalleProveedorMasConfiableComponent,
+    ListaReporteContratoComponent,
     HomeComponent,
     MenuComponent,
     LoginComponent,
