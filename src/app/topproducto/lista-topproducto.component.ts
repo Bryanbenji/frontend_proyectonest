@@ -1,9 +1,12 @@
+import * as XLSX from 'xlsx';
+
 import { TokenService } from '../services/token.service';
 import { TopProductoService } from '../services/topproducto.service';
 import { TopProducto } from '../models/topproducto';
 import { Component, OnInit } from '@angular/core';
 
 import Swal from 'sweetalert2';
+import { ExcelVisitor } from '../models/excelvisitor';
 
 @Component({
   selector: 'app-lista-topproducto',
@@ -32,12 +35,35 @@ export class ListaTopProductoComponent implements OnInit {
     this.topproductoService.lista().subscribe(
       data => {
         this.topproductos = data;
+        console.log(this.topproductos);
         this.listaVacia = undefined;
       },
       err => {
         this.listaVacia = err.error.message;
       }
     );
+  }
+
+  descargarExcel(): void {
+    const data: any[][] = [
+      ['ID', 'Nombre', 'Imagen', 'Descripcion', 'Puntaje', 'Rentabilidad'],
+      ...this.topproductos.map((topproducto) => [
+        topproducto.id,
+        topproducto.nombre,
+        topproducto.imagenUrl,
+        topproducto.descripcion,
+        topproducto.puntaje,
+        topproducto.rentabilidad,
+      ]),
+    ];
+
+    const workBook = XLSX.utils.book_new();
+    const workSheet = XLSX.utils.aoa_to_sheet(data);
+
+    XLSX.utils.book_append_sheet(workBook, workSheet, 'Productos');
+
+    // Guardar el archivo Excel en el cliente
+    XLSX.writeFile(workBook, 'productos.xlsx');
   }
 
   borrar(id: number ): void {

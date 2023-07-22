@@ -1,3 +1,5 @@
+
+
 export class Producto {
     id?: number;
     nombre: string;
@@ -17,4 +19,6 @@ export class Producto {
         this.nombreproveedor = nombreproveedor;
 
     }
+
+    
 }

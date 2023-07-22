@@ -1,3 +1,5 @@
+import { ExcelVisitor } from "./excelvisitor";
+
 export class TopProducto {
     id?: number;
     nombre: string;
@@ -15,4 +17,10 @@ export class TopProducto {
         this.rentabilidad = rentabilidad;
 
     }
+
+    accept(visitor: ExcelVisitor): void {
+        visitor.visitTopProducto(this);
+      }
+
+    
 }

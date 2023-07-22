@@ -24,21 +24,24 @@ export class ListaProductoComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+    
     this.cargarProductos();
     this.isAdmin = this.tokenService.isAdmin();
   }
 
   cargarProductos(): void {
+    
     this.productoService.lista().subscribe(
       data => {
         this.productos = data;
-        this.listaVacia = undefined;
+        this.listaVacia = undefined;   
       },
       err => {
         this.listaVacia = err.error.message;
       }
     );
   }
+
 
   borrar(id: number ): void {
     Swal.fire({
